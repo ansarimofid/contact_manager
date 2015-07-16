@@ -1,0 +1,51 @@
+body{
+    text-align: center;
+    box-sizing: border-box;
+}
+
+form div{
+    padding: 10px;
+
+}
+
+form input{
+    padding: 5px;
+    border-radius: 4px;
+    background-color: rgb(234, 233, 233);
+    margin-left: 10px;
+    margin-right: 20px;
+    text-align: left;
+    width: 60%;
+    box-sizing: border-box;
+    font-size: medium;
+}
+form button{
+    width: 10%;
+    text-align: center;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: rgb(0, 116, 116);
+    border: 2px solid whitesmoke;
+    color: black;
+    color: whitesmoke;
+}
+form input:hover{
+    padding: 5px;
+    border-radius: 4px;
+    background-color: whitesmoke;
+}
+
+form{
+    background-color:rgb(0, 116, 116);
+    color:whitesmoke;
+    padding: 20px;
+}
+form label{
+    display:block;
+    text-align: right;
+    width: 35%;
+    float: left;
+    box-sizing: border-box;
+    font-size: large;
+    line-height: 2;
+}
