@@ -1,6 +1,8 @@
 body{
     text-align: center;
     box-sizing: border-box;
+    background-color: rgb(7, 27, 27);
+    color: whitesmoke;
 }
 
 form div{
@@ -8,17 +10,22 @@ form div{
 
 }
 
-form input{
+form input,select{
     padding: 5px;
     border-radius: 4px;
     background-color: rgb(234, 233, 233);
-    margin-left: 10px;
-    margin-right: 20px;
     text-align: left;
     width: 60%;
     box-sizing: border-box;
     font-size: medium;
 }
+
+form input:hover,select:hover{
+    padding: 5px;
+    border-radius: 4px;
+    background-color: whitesmoke;
+}
+
 form button{
     width: 10%;
     text-align: center;
@@ -29,16 +36,13 @@ form button{
     color: black;
     color: whitesmoke;
 }
-form input:hover{
-    padding: 5px;
-    border-radius: 4px;
-    background-color: whitesmoke;
-}
 
-form{
+form,#output{
     background-color:rgb(0, 116, 116);
     color:whitesmoke;
     padding: 20px;
+    width: 70%;
+    display: inline-block;
 }
 form label{
     display:block;
@@ -48,4 +52,8 @@ form label{
     box-sizing: border-box;
     font-size: large;
     line-height: 2;
+}
+
+#output {
+    padding: 40px;
 }

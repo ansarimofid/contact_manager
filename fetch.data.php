@@ -1,4 +1,4 @@
-<?php
+<?
 //Create Connection
 function create_conn($server, $user, $password, $db = "none") {
     if($db=="none"){
@@ -65,8 +65,24 @@ $conn=new mysqli("localhost","mofid","","testing");
           "test",
           "id INT AUTO_INCREMENT PRIMARY KEY,fname varchar(30) NOT NULL,lname varchar(30) NOT NULL ,Gender CHAR(1) NOT NULL,bday DATE NOT NULL");*/
 
-$sql='insert into test (fname,lname,bday,gender) values("Mofid","Ansari","1996-02-25","M")';
+/*$sql='insert into test (fname,lname,bday,gender) values("Mofid","Ansari","1996-02-25","M")';
 
-sql_query($conn,$sql);
+sql_query($conn,$sql);*/
+
+
+/*
+if(isset($_POST)){
+   $sql = 'insert into test (fname,lname,bday,gender) values ("'.$_POST['fname'].'","'.$_POST['lname'].'","'.$_POST['bday'].'","'.$_POST['gender'].'")';
+    echo $sql;
+    sql_query($conn,$sql);
+}
+*/
+
+/*if(isset($_POST['q'])){
+echo $_POST['q'];
+echo $_POST[''];
+}*/
+
+
 
 ?>
