@@ -1,4 +1,5 @@
 <?php
+//header("Content-Type: text/javascript; charset=utf-8");
 //Create Connection
 function create_conn($server, $user, $password, $db = "none") {
     if($db=="none"){
@@ -55,9 +56,11 @@ function sql_query($conn,$query) {
 
 //Fetch Data from Database
 function sql_fetch($conn,$query){
-    if ($result = $conn->query($query))
+    if (!$result = $conn->query($query)){
+        echo "Error: ".$conn->error;
+        return 0;
+    }
     return $result;
-    else return 0;
 }
 
 //Create contact Detail Table
@@ -132,10 +135,20 @@ function add_detail($conn) {
      echo "Successfully Added Detaile";
 }
 
+//Generate Json Query
+function json_out($conn,$query) {
+    $result = sql_fetch($conn,$query);
+    $out=array();
+    while($row = $result->fetch_assoc())
+        $out[]=$row;
+    echo json_encode($out);
+}
+
+
 $conn=new mysqli("localhost","mofid","","testing");
 
-add_detail($conn);
+$sql_1="SELECT * FROM address";
+json_out($conn,$sql_1);
 
-//create_contact_db($conn);
 
 ?>

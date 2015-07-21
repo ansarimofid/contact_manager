@@ -5,8 +5,12 @@ $('document').ready(function () {
         var form_data = $(this).serialize();
 
         $.post("fetch.data.php?", form_data+"&form=true", function (data) {
-                $('#output>div').html(data);
-            });
+                $('#output>div').html(JSON.stringify(data[0]));
+             //alert("Mofuu");
+                    //var obj = $.parseJSON(data);
+            //alert (obj[0].name);
+
+            },"json");
             /*$('#output>div').text("Success");
 
             var xmlhttp=new XMLHttpRequest();
@@ -18,6 +22,8 @@ $('document').ready(function () {
 
             xmlhttp.open("POST","fetch.data.php",true);
             xmlhttp.send();*/
+
+
     });
 
     $('#advance_b').click(function(){
