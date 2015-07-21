@@ -4,7 +4,7 @@ $('document').ready(function () {
 
         var form_data = $(this).serialize();
 
-        $.post("fetch.data.php?", form_data+"&q=form", function (data) {
+        $.post("fetch.data.php?", form_data+"&form=true", function (data) {
                 $('#output>div').html(data);
             });
             /*$('#output>div').text("Success");
@@ -19,4 +19,8 @@ $('document').ready(function () {
             xmlhttp.open("POST","fetch.data.php",true);
             xmlhttp.send();*/
     });
+
+    $('#advance_b').click(function(){
+        $('#advance').slideToggle(1000);
+    })
 });

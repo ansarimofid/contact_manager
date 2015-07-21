@@ -1,4 +1,4 @@
-<?
+<?php
 //Create Connection
 function create_conn($server, $user, $password, $db = "none") {
     if($db=="none"){
@@ -60,29 +60,82 @@ function sql_fetch($conn,$query){
     else return 0;
 }
 
-$conn=new mysqli("localhost","mofid","","testing");
-/*create_tb($conn,
-          "test",
-          "id INT AUTO_INCREMENT PRIMARY KEY,fname varchar(30) NOT NULL,lname varchar(30) NOT NULL ,Gender CHAR(1) NOT NULL,bday DATE NOT NULL");*/
+//Create contact Detail Table
+function create_contact_db($conn,$dbname='none'){
+    if(!$dbname=='none')
+    create_db($conn,$dbname);
 
-/*$sql='insert into test (fname,lname,bday,gender) values("Mofid","Ansari","1996-02-25","M")';
+    $detail = "id INT PRIMARY KEY AUTO_INCREMENT,
+          f_name varchar(30) NOT NULL,
+          l_name varchar(30) NOT NULL ,
+          gender CHAR(1) NOT NULL,
+          bday DATE NOT NULL,
+          title VARCHAR(50),
+          email varchar(50) NOT NULL UNIQUE,
+          tel VARCHAR(20),
+          mob VARCHAR(20),
+          n_name VARCHAR(30) DEFAULT 'N/A',
+          photo VARCHAR(255),
+          org VARCHAR(50),
+          note TEXT,
+          website VARCHAR(255)
+          ";
 
-sql_query($conn,$sql);*/
+    $addr = "id INT NOT NULL PRIMARY KEY,
+        po_box varchar(100),
+        ext varchar(100),
+        street varchar(50),
+        city varchar(50),
+        state varchar(50),
+        zipcode varchar(20),
+        country varchar(50),
+        FOREIGN KEY(id) references detail(id) ON DELETE CASCADE
+            ON UPDATE CASCADE";
 
-
-/*
-if(isset($_POST)){
-   $sql = 'insert into test (fname,lname,bday,gender) values ("'.$_POST['fname'].'","'.$_POST['lname'].'","'.$_POST['bday'].'","'.$_POST['gender'].'")';
-    echo $sql;
-    sql_query($conn,$sql);
+    create_tb($conn,"detail",$detail);
+    create_tb($conn,"address",$addr);
 }
-*/
 
-/*if(isset($_POST['q'])){
-echo $_POST['q'];
-echo $_POST[''];
-}*/
+//Adding Data To Database
+function add_detail($conn) {
+    if(isset($_POST['form'])){
+        $sql_1="INSERT INTO `detail`(`f_name`, `l_name`, `gender`, `bday`, `title`, `email`, `tel`, `mob`, `n_name`,`org`, `note`, `website`) VALUES(
+        '$_POST[f_name]',
+        '$_POST[l_name]',
+        '$_POST[gender]',
+        '$_POST[bday]',
+        '$_POST[title]',
+        '$_POST[email]',
+        '$_POST[tel]',
+        '$_POST[mob]',
+        '$_POST[n_name]',
+        '$_POST[org]',
+        '$_POST[note]',
+        '$_POST[website]'
+        )";
 
+        $sql_2="INSERT INTO `address`(id,`po_box`, `ext`, `street`, `city`, `state`, `zipcode`, `country`) VALUES(
+        last_insert_id(),
+        '$_POST[po_box]',
+        '$_POST[ext]',
+        '$_POST[street]',
+        '$_POST[city]',
+        '$_POST[state]',
+        '$_POST[zipcode]',
+        '$_POST[country]'
+        )";
 
+        sql_query($conn,$sql_1);
+        sql_query($conn,$sql_2);
+
+    }
+     echo "Successfully Added Detaile";
+}
+
+$conn=new mysqli("localhost","mofid","","testing");
+
+add_detail($conn);
+
+//create_contact_db($conn);
 
 ?>
