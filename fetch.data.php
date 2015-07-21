@@ -152,9 +152,39 @@ function search_suggest($conn) {
     }
 }
 
+//View All Contacts in Database
+function view_all_contacts($conn) {
+    $query="SELECT * from detail,address where detail.id=address.id";
+    json_out($conn,$query);
+}
+
+//View Single Contact
+function view_contact($conn) {
+    $query="SELECT * from detail,address where detail.id=address.id and f_name = 'aadil'";
+    json_out($conn,$query);
+}
+
+//Delete Contact
+function delete_contact($conn,$id) {
+    $query="delete from detail where id = $id";
+    sql_query($conn,$query);
+}
+
+//Update Contact
+function update_contact($conn,$id,$key,$value) {
+    $query="UPDATE detail set $key = '$value' where id = $id";
+    sql_query($conn,$query);
+}
+
+
 $conn=new mysqli("localhost","mofid","","testing");
 add_detail($conn);
 search_suggest($conn);
+//view_all_contacts($conn);
+//view_contact($conn);
+//delete_contact($conn,'300014');
+//update_contact($conn,'300013','l_name','Mittal');
+
 
 /*$sql_1="SELECT * FROM address";
 json_out($conn,$sql_1);*/
