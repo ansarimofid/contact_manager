@@ -131,8 +131,8 @@ function add_detail($conn) {
         sql_query($conn,$sql_1);
         sql_query($conn,$sql_2);
 
+        echo "Successfully Added Detaile";
     }
-     echo "Successfully Added Detaile";
 }
 
 //Generate Json Query
@@ -144,11 +144,20 @@ function json_out($conn,$query) {
     echo json_encode($out);
 }
 
+//Search Suggestion
+function search_suggest($conn) {
+    if(isset($_POST['key']) && $_POST['search']!='') {
+    $query="SELECT f_name,l_name from detail where f_name LIKE '$_POST[search]%'";
+    json_out($conn,$query);
+    }
+}
 
 $conn=new mysqli("localhost","mofid","","testing");
+add_detail($conn);
+search_suggest($conn);
 
-$sql_1="SELECT * FROM address";
-json_out($conn,$sql_1);
+/*$sql_1="SELECT * FROM address";
+json_out($conn,$sql_1);*/
 
 
 ?>

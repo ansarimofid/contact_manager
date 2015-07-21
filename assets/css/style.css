@@ -65,3 +65,8 @@ form label{
     border-radius: 50%;
     cursor: pointer;
 }
+
+.search-label {
+    font-size: 3em;
+}
+

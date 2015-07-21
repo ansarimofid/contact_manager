@@ -4,29 +4,23 @@ $('document').ready(function () {
 
         var form_data = $(this).serialize();
 
-        $.post("fetch.data.php?", form_data+"&form=true", function (data) {
-                $('#output>div').html(JSON.stringify(data[0]));
-             //alert("Mofuu");
-                    //var obj = $.parseJSON(data);
-            //alert (obj[0].name);
-
-            },"json");
-            /*$('#output>div').text("Success");
-
-            var xmlhttp=new XMLHttpRequest();
-            xmlhttp.onreadystatechange=function(){
-                if(xmlhttp.status==200){
-                    $('#output>div').html(xmlhttp.responseText);
-                }
-            }
-
-            xmlhttp.open("POST","fetch.data.php",true);
-            xmlhttp.send();*/
-
-
+        $.post("fetch.data.php?", form_data + "&form=true", function (data) {
+            $('#output>div').html(data);
+        });
     });
 
-    $('#advance_b').click(function(){
+    $('#advance_b').click(function () {
         $('#advance').slideToggle(1000);
-    })
+    });
+
+    $('#search_input').keyup(function () {
+        var inp = $(this).serialize();
+        $.post("fetch.data.php", inp + "&key=key", function (data) {
+            var out = "";
+            for (i = 0; i < data.length; i++) {
+                out += data[i].f_name + " " + data[i].l_name + "<br>";
+            }
+            $('#output-search').html(out);
+        }, "json");
+    });
 });
