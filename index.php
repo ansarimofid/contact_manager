@@ -4,6 +4,7 @@
 <head>
     <title>Document</title>
     <link rel="stylesheet" href="/contact_manager/assets/css/style.css">
+    <link rel="stylesheet" href="/contact_manager/assets/css/bootstrap.css">
 </head>
 
 <body>
@@ -104,6 +105,7 @@
 
     <script src="/contact_manager/assets/js/jquery.min.js"></script>
     <script src="/contact_manager/assets/js/main.js"></script>
+    <script src="/contact_manager/assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>
