@@ -1,2 +1,113 @@
+@fontface{
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@fontface{
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@fontface{
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Italic.ttf);
+    font-weight: normal;
+    font-style:italic;
+}
 
+@fontface{
+    font-family: PtSerif;
+    src: url(../fonts/PT_Serif-Web-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@fontface{
+    font-family: PtSerif;
+    src: url(../fonts/PT_Serif-Web-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@fontface{
+    font-family: PtSerif;
+    src: url(../fonts/PT_Serif-Web-Italic.ttf);
+    font-weight: normal;
+    font-style:italic;
+}
+
+
+.nav-log {
+    margin-bottom: 0;
+    border-radius: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color:  rgba(63,38,28,1);
+}
+
+body,html{
+    height: 100%;
+    text-align: center;
+}
+
+body{
+    background-color: rgba(197,190,139,1);
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.wrapper {
+    height: 100%;
+}
+
+.tes100 {
+    height: 100%;
+}
+
+.container-fluid{
+    padding: 0;
+}
+.nav-main {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 70px;
+    background-color: rgba(63,38,28,1);
+}
+
+.navbar-center{
+    display: inline-block;
+    float: none;
+    font-size: 1.4em;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: whitesmoke;
+}
+
+.navbar-nav > li {
+    padding: 0 10px 0 10px;
+}
+
+.brand {
+    height: 30%;
+}
+
+.brand-icon {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: solid 2px rgba(63,38,28,1);
+    transform: rotateZ(45deg);
+}
+
+.brand-icon div{
+    color: rgba(63,38,28,1);
+    position: absolute;
+    left: 15%;
+    top: 25%;
+    font-size: 40px;
+    transform: rotateZ(-45deg);
+    font-family: 'PtSerif';
+}
 
