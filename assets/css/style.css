@@ -1,90 +1,135 @@
-@fontface{
+/*Fonts*/
+
+@fontface {
     font-family: OpenSans;
     src: url(../fonts/OpenSans-Regular.ttf);
     font-weight: normal;
     font-style: normal;
 }
-@fontface{
+
+@fontface {
     font-family: OpenSans;
     src: url(../fonts/OpenSans-Bold.ttf);
     font-weight: bold;
     font-style: normal;
 }
-@fontface{
+
+@fontface {
     font-family: OpenSans;
     src: url(../fonts/OpenSans-Italic.ttf);
     font-weight: normal;
-    font-style:italic;
+    font-style: italic;
 }
 
-@fontface{
+@fontface {
     font-family: PtSerif;
     src: url(../fonts/PT_Serif-Web-Regular.ttf);
     font-weight: normal;
     font-style: normal;
 }
-@fontface{
+
+@fontface {
     font-family: PtSerif;
     src: url(../fonts/PT_Serif-Web-Bold.ttf);
     font-weight: bold;
     font-style: normal;
 }
-@fontface{
+
+@fontface {
     font-family: PtSerif;
     src: url(../fonts/PT_Serif-Web-Italic.ttf);
     font-weight: normal;
-    font-style:italic;
+    font-style: italic;
+}
+/*Bootstrap Custom*/
+
+.navbar-default .navbar-nav > li > a {
+    color: rgba(255, 255, 255, 0.7);
 }
 
+.navbar-nav > li {
+    padding: 0 10px 0 10px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: white;
+    background-color: transparent;
+}
+
+.container-fluid {
+    padding: 0;
+}
+/*General Style*/
+
+body,
+html {
+    height: 100%;
+    text-align: center;
+}
+
+body {
+    background-color: rgba(197, 190, 139, 1);
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.wrapper {}
+/*Navigation Bar*/
 
 .nav-log {
     margin-bottom: 0;
     border-radius: 0px;
     padding-top: 0;
     padding-bottom: 0;
-    background-color:  rgba(63,38,28,1);
 }
 
-body,html{
-    height: 100%;
-    text-align: center;
-}
-
-body{
-    background-color: rgba(197,190,139,1);
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-.wrapper {
-    height: 100%;
-}
-
-.tes100 {
-    height: 100%;
-}
-
-.container-fluid{
-    padding: 0;
-}
 .nav-main {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    min-height: 70px;
-    background-color: rgba(63,38,28,1);
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    min-height: 60px;
+    border-radius: 0px;
 }
 
-.navbar-center{
+.nav-log,
+.nav-main {
+    background-color: rgba(63, 38, 28, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-width: 1px 0 1px 0;
+}
+
+.navbar-center {
     display: inline-block;
     float: none;
     font-size: 1.4em;
 }
 
-.navbar-default .navbar-nav > li > a {
-    color: whitesmoke;
+.navbar-custom > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.navbar-nav > li {
-    padding: 0 10px 0 10px;
+.navbar-custom {
+    min-height: 50px;
 }
+
+@media (min-width: 600px) {
+    .navbar-custom {
+        float: right !important;
+    }
+}
+
+@media (min-width: 600px) {
+    .navbar-nav > li {
+        float: left;
+    }
+}
+/*Brands*/
 
 .brand {
     height: 30%;
@@ -97,12 +142,12 @@ body{
     display: inline-block;
     height: 100px;
     width: 100px;
-    border: solid 2px rgba(63,38,28,1);
+    border: solid 2px rgba(63, 38, 28, 1);
     transform: rotateZ(45deg);
 }
 
-.brand-icon div{
-    color: rgba(63,38,28,1);
+.brand-icon div {
+    color: rgba(63, 38, 28, 1);
     position: absolute;
     left: 15%;
     top: 25%;
@@ -110,4 +155,25 @@ body{
     transform: rotateZ(-45deg);
     font-family: 'PtSerif';
 }
+/*Test*/
 
+.tes100 {
+    height: 100%;
+    padding: 0;
+}
+
+.sidebar {
+    display: none;
+    float: left;
+    position: relative;
+    top: 0;
+    height: 100%;
+    background-color: rgba(63, 38, 28, 1);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0 5px;
+}
+
+.advance {
+    background-color: rgba(206, 164, 92, 1);
+    color: rgba(63, 38, 28, 1);
+}
