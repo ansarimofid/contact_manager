@@ -4,8 +4,9 @@
 <head>
     <title>Document</title>
     <link rel="stylesheet" href="/contact_manager/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="/contact_manager/assets/css/style.css">
     <link rel="stylesheet" href="/contact_manager/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/contact_manager/assets/css/style.css">
+
 </head>
 
 <body>
@@ -56,7 +57,15 @@
                             </button>
                         </div>
 
+                        <!--                        Option Bar-->
+                        <div>
+                            <a href="" class="navbar-left navbar-text options"><i class="rel fa fa-bars fa-2x"></i></a>
+                        </div>
+
                         <div class="collapse navbar-collapse" id="nav-content">
+                            <div class="navbar-left">
+
+                            </div>
                             <ul class="nav navbar-nav navbar-center">
                                 <li><a href="">Home</a>
                                 </li>
@@ -64,10 +73,23 @@
                                 </li>
                                 <li><a href="">Import</a>
                                 </li>
-                                <li><a href="">Search</a>
+                                <li>
+                                    <form class="navbar-form" role="search">
+                                        <div class="form-group input-group">
+<!--                                            <input type="text" class="form-control" placeholder="Search">-->
+                                       <input type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+      </span>
+                                        </div>
+<!--                                        <button type="submit" class="btn btn-default">Submit</button>-->
+                                    </form>
                                 </li>
                             </ul>
+
                         </div>
+
+
                     </div>
                 </nav>
 
@@ -77,10 +99,13 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, obcaecati perferendis cumque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora voluptate, voluptatibus provident reiciendis veritatis laboriosam distinctio perspiciatis repellendus assumenda eveniet quibusdam exercitationem sequi nemo expedita ad. Aliquam doloribus, obcaecati eveniet?
         </div>
     </div>
+
+    <div class="tes100">sdasdasdas</div>
     <!--Scripts and Plugins-->
     <script src="/contact_manager/assets/js/jquery.min.js"></script>
     <script src="/contact_manager/assets/js/main.js"></script>
     <script src="/contact_manager/assets/js/bootstrap.min.js"></script>
+    <script src="/contact_manager/assets/js/jquery.sticky.js"></script>
 </body>
 
 </html>

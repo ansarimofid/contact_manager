@@ -23,4 +23,15 @@ $('document').ready(function () {
             $('#output-search').html(out);
         }, "json");
     });
+
+    $('.nav-main').sticky();
+    $('.nav-main').on('sticky-start', function() {
+
+        $('#nav-content').append("<ul class='nav navbar-nav navbar-custom' id='sticky-rm'><li><a href=''><i class='fa fa-sign-in fa-2x'></i></a></li><li><a href=''><i class='fa fa-user-plus fa-2x'></i></a></li></ul>");
+    });
+
+    $('.nav-main').on('sticky-end', function() {
+
+        $('#sticky-rm').remove();
+    });
 });
