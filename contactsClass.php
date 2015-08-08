@@ -104,15 +104,15 @@ class contactdb{
     function create_contact_table() {
 
         $detail = "id INT PRIMARY KEY AUTO_INCREMENT,
-              f_name varchar(30) NOT NULL,
-              l_name varchar(30) NOT NULL ,
+              fname varchar(30) NOT NULL,
+              lname varchar(30) NOT NULL ,
               gender CHAR(1) NOT NULL,
               bday DATE NOT NULL,
               title VARCHAR(50),
               email varchar(50) NOT NULL UNIQUE,
               tel VARCHAR(20),
               mob VARCHAR(20),
-              n_name VARCHAR(30) DEFAULT 'N/A',
+              nname VARCHAR(30) DEFAULT 'N/A',
               photo VARCHAR(255),
               org VARCHAR(50),
               note TEXT,
@@ -120,7 +120,7 @@ class contactdb{
               ";
 
         $addr = "id INT NOT NULL PRIMARY KEY,
-            po_box varchar(100),
+            pobox varchar(100),
             ext varchar(100),
             street varchar(50),
             city varchar(50),

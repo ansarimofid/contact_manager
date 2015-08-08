@@ -141,6 +141,9 @@ body {
     float: none;
     font-size: 1.4em;
 }
+.navbar-center>li{
+    
+}
 
 .navbar-custom > li > a {
     padding-top: 10px;
@@ -151,14 +154,31 @@ body {
     min-height: 50px;
 }
 
+/*
 @media (min-width: 600px) {
     .navbar-custom {
+        float: right !important;
+    }
+}
+*/
+
+/*
+@media (min-width: 600px) {
+    .navbar-custom > li {
         float: right !important;
     }
 }
 
 @media (min-width: 600px) {
     .navbar-custom > li {
+        float: right !important;
+    }
+}
+
+*/
+
+@media (min-width: 766px) {
+    .navbar-custom {
         float: right !important;
     }
 }
@@ -248,3 +268,12 @@ header {
     padding: 10px 0;
 }
 
+
+.input-custom {
+    width: 1% !important;
+}
+
+.navbar-form-custom {
+    margin:0;
+    padding: 5px 0;
+}

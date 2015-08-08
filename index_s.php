@@ -15,31 +15,6 @@
         <!--       Header-->
         <header>
             <div class="container-fluid">
-                <!--           Navigation Log-->
-                <nav class="navbar navbar-default nav-log">
-                    <div class="container-fluid">
-                        <div>
-                            <ul class="nav navbar-nav navbar-custom">
-                                <li><a href="">Login
-                                <i class="fa fa-sign-in fa-2x"></i>
-                                </a>
-                                </li>
-                                <li><a href="">Register
-                                <i class="fa fa-user-plus fa-2x"></i>
-                                </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-                <!--                Brand Icon-->
-                <div class="brand">
-                    <div class="brand-icon">
-                        <div>
-                            CM
-                        </div>
-                    </div>
-                </div>
                 <!--                Navigation Main-->
                 <nav class="navbar navbar-default nav-main">
                     <div class="container-fluid">
@@ -52,38 +27,30 @@
                                 <span class="icon-bar"></span>
                             </button>
                         </div>
-                        <div class="collapse navbar-collapse nav-add-extra" id="nav-content">
-                            <ul class="nav navbar-nav navbar-center">
-                                <li><a href="">Home</a>
-                                </li>
-                                <li><a href="">Add Contact</a>
-                                </li>
-
-                                <li><a href="">View All</a>
-                                </li>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Advance
-                                    <i class="fa fa-caret-down"></i></a>
-                                    <ul class="dropdown-menu drop-pos" role="menu">
-                                        <li><a href="#">Import</a>
-                                        </li>
-                                        <li><a href="#">Backup</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <form class="navbar-form" role="search">
-                                        <div class="form-group input-group">
+                        <div class="collapse navbar-collapse" id="nav-content">
+                            <ul class="nav navbar-nav navbar-center col-sm-8">
+                                <li class="col-sm-12">
+                                    <form class="navbar-form navbar-form-custom" role="search">
+                                        <div class="form-group input-group input-group-lg  col-sm-10">
                                             <input type="text" class="form-control" placeholder="Search for...">
-                                            <span class="input-group-btn">
+                                            <span class="input-group-btn input-custom">
         <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
       </span>
                                         </div>
                                     </form>
+                                </li>
+                            </ul>
+                            <!--                            Nav-Log-->
+                            <ul class="nav navbar-nav navbar-custom">
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-sign-in fa-2x"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-user-plus fa-2x"></i>
+                                    </a>
                                 </li>
                             </ul>
 
@@ -117,7 +84,15 @@
     -->
 
         <div class="tes100">sdasdasdas</div>
-        <!--        <div class="tes100">sdasdasdas</div>-->
+        <!--Tabs-->
+        <ul class="nav nav-tabs nav-stacked">
+            <li role="presentation" class="active"><a href="#">Home</a>
+            </li>
+            <li role="presentation"><a href="#">Profile</a>
+            </li>
+            <li role="presentation"><a href="#">Messages</a>
+            </li>
+        </ul>
     </div>
 
     <!--Scripts and Plugins-->

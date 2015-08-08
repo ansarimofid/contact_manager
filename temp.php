@@ -15,31 +15,6 @@
         <!--       Header-->
         <header>
             <div class="container-fluid">
-                <!--           Navigation Log-->
-                <nav class="navbar navbar-default nav-log">
-                    <div class="container-fluid">
-                        <div>
-                            <ul class="nav navbar-nav navbar-custom">
-                                <li><a href="">Login
-                                <i class="fa fa-sign-in fa-2x"></i>
-                                </a>
-                                </li>
-                                <li><a href="">Register
-                                <i class="fa fa-user-plus fa-2x"></i>
-                                </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-                <!--                Brand Icon-->
-                <div class="brand">
-                    <div class="brand-icon">
-                        <div>
-                            CM
-                        </div>
-                    </div>
-                </div>
                 <!--                Navigation Main-->
                 <nav class="navbar navbar-default nav-main">
                     <div class="container-fluid">
@@ -52,7 +27,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                         </div>
-                        <div class="collapse navbar-collapse nav-add-extra" id="nav-content">
+                        <div class="collapse navbar-collapse" id="nav-content">
                             <ul class="nav navbar-nav navbar-center">
                                 <li><a href="">Home</a>
                                 </li>
@@ -84,6 +59,19 @@
       </span>
                                         </div>
                                     </form>
+                                </li>
+                            </ul>
+                            <!--                            Nav-Log-->
+                            <ul class="nav navbar-nav navbar-custom">
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-sign-in fa-2x"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-user-plus fa-2x"></i>
+                                    </a>
                                 </li>
                             </ul>
 
