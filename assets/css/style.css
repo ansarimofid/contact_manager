@@ -43,7 +43,6 @@
 }
 /*Bootstrap Custom*/
 
-.sidebar-container a,
 .navbar-default .navbar-nav > li > a {
     color: rgba(255, 255, 255, 0.7);
 }
@@ -79,16 +78,18 @@
     background-color: rgba(44, 13, 1, 1);
     ;
 }
-@media (max-width: 767px){
-.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-color: rgba(255,255,255,0.7);
-}}
 
-@media (max-width: 767px){
-.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover{
-color: rgba(255,255,255,1);
-}}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
 
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+}
 
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
@@ -125,7 +126,7 @@ body {
     margin: 0;
     padding-top: 5px;
     padding-bottom: 5px;
-    min-height: 60px;
+    min-height: 75px;
     border-radius: 0px;
 }
 
@@ -141,9 +142,8 @@ body {
     float: none;
     font-size: 1.4em;
 }
-.navbar-center>li{
-    
-}
+
+.navbar-center>li {}
 
 .navbar-custom > li > a {
     padding-top: 10px;
@@ -153,7 +153,6 @@ body {
 .navbar-custom {
     min-height: 50px;
 }
-
 /*
 @media (min-width: 600px) {
     .navbar-custom {
@@ -161,7 +160,6 @@ body {
     }
 }
 */
-
 /*
 @media (min-width: 600px) {
     .navbar-custom > li {
@@ -182,32 +180,9 @@ body {
         float: right !important;
     }
 }
-/*Brands*/
 
-.brand {
-    height: 30%;
-}
 
-.brand-icon {
-    position: relative;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    display: inline-block;
-    height: 100px;
-    width: 100px;
-    border: solid 2px rgba(63, 38, 28, 1);
-    transform: rotateZ(45deg);
-}
 
-.brand-icon div {
-    color: rgba(63, 38, 28, 1);
-    position: absolute;
-    left: 15%;
-    top: 25%;
-    font-size: 40px;
-    transform: rotateZ(-45deg);
-    font-family: 'PtSerif';
-}
 /*Test*/
 
 .tes100 {
@@ -217,34 +192,40 @@ body {
 
 .sidebar {
     /*    float: left;*/
-
+    
     position: fixed;
-    top: 284px;
     left: 0px;
-    height: 50%;
-    width: 70px;
+    height: 100%;
     color: rgba(255, 255, 255, 0.8);
     z-index: 90;
     font-size: 3em;
+}
+
+.sidebar-container a {
+    color: rgba(63, 38, 28, 0.7);
+}
+.sidebar-container a :hover{
+    color: rgba(63, 38, 28, 1);
 }
 
 .advance {
     background-color: rgba(206, 164, 92, 1);
     color: rgba(63, 38, 28, 1);
 }
-
-.options>a {
+.options{
     position: relative;
     color: rgba(63, 38, 28, 0.7) !important;
-    display: inline-block;
-    top: 40%;
+    top: 90%;
     left: 0;
     background-color: rgba(255, 255, 255, 1);
     padding: 5px 16px;
 }
-.options>a:hover{
-    color: rgba(63, 38, 28, 1) !important;
+.options>a {
+    color: rgba(63, 38, 28, 0.7)
+}
 
+.options>a:hover {
+    color: rgba(63, 38, 28, 1) !important;
 }
 
 header {
@@ -256,24 +237,39 @@ header {
 }
 
 .sidebar-container {
-    position: relative;
+    position: absolute;
     /*    display: inline-block;*/
     /*    top:15%;*/
-/*    left: -70px;*/
-    background-color: rgba(63, 38, 28, 0.7);
+    /*    left: -70px;*/
+    /*    background-color: rgba(63, 38, 28, 0.7);*/
+    
     padding: 15px 10px 15px 10px;
+    background-color: rgba(255, 255, 255, 1);
+    height: 100%
 }
 
 .sidebar-container div {
     padding: 10px 0;
 }
 
-
 .input-custom {
     width: 1% !important;
 }
 
 .navbar-form-custom {
-    margin:0;
+    margin: 0;
     padding: 5px 0;
+}
+.sidebar-content {
+    position: relative;
+    top: 100px;
+}
+
+.brand-custom {
+    color: rgba(63, 38, 28, 1) !important;
+    margin-left: 8px !important;
+    background-color: rgba(255, 255, 255, 1) !important;
+    border-radius: 8px 16px;
+    font-family: PtSerif;
+    
 }
