@@ -61,7 +61,6 @@
                 </nav>
             </div>
         </header>
-
         <!--        Sidebar-->
         <div class="sidebar">
             <div class="sidebar-container">
@@ -82,13 +81,3 @@
             <div class="options"><a href="#"><i class="fa fa-arrow-left"></i></a>
             </div>
         </div>
-    </div>
-
-    <!--Scripts and Plugins-->
-    <script src="/contact_manager/assets/js/jquery.min.js"></script>
-    <script src="/contact_manager/assets/js/main.js"></script>
-    <script src="/contact_manager/assets/js/bootstrap.min.js"></script>
-    <script src="/contact_manager/assets/js/jquery.sticky.js"></script>
-</body>
-
-</html>
