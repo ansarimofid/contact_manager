@@ -5,12 +5,14 @@ $('document').ready(function () {
         var form_data = $(this).serialize();
 
         $.post("fetch.data.php?", form_data + "&form=true", function (data) {
-            $('#output>div').html(data);
+            $('.modal-body').html(data);
         });
     });
 
-    $('#advance_b').click(function () {
+    $('#advance-button').click(function () {
         $('#advance').slideToggle(1000);
+        $('.adv-inner-text-before').fadeToggle();
+        $('.adv-inner-text-after').fadeToggle();
     });
 
     $('#search_input').keyup(function () {
@@ -39,5 +41,11 @@ $('document').ready(function () {
         e.preventDefault();
         $('.sidebar-container').fadeToggle(1000);
         $('.options> a > i').toggleClass('fa-arrow-right');
+    });
+    $('[data-toggle="popover"]').popover({
+    
+    });
+    $('[data-toggle="tooltip"]').tooltip({
+    placement:'right'
     });
 });

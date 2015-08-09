@@ -137,24 +137,24 @@ class contactdb{
     //Adding Data To Database
     function add_detail() {
         if(isset($_POST['form'])){
-            $sql_1="INSERT INTO `detail`(`f_name`, `l_name`, `gender`, `bday`, `title`, `email`, `tel`, `mob`, `n_name`,`org`, `note`, `website`) VALUES(
-            '$_POST[f_name]',
-            '$_POST[l_name]',
+            $sql_1="INSERT INTO `detail`(`fname`, `lname`, `gender`, `bday`, `title`, `email`, `tel`, `mob`, `nname`,`org`, `note`, `website`) VALUES(
+            '$_POST[fname]',
+            '$_POST[lname]',
             '$_POST[gender]',
             '$_POST[bday]',
             '$_POST[title]',
             '$_POST[email]',
             '$_POST[tel]',
             '$_POST[mob]',
-            '$_POST[n_name]',
+            '$_POST[nname]',
             '$_POST[org]',
             '$_POST[note]',
             '$_POST[website]'
             )";
 
-            $sql_2="INSERT INTO `address`(id,`po_box`, `ext`, `street`, `city`, `state`, `zipcode`, `country`) VALUES(
+            $sql_2="INSERT INTO `address`(id,`pobox`, `ext`, `street`, `city`, `state`, `zipcode`, `country`) VALUES(
             last_insert_id(),
-            '$_POST[po_box]',
+            '$_POST[pobox]',
             '$_POST[ext]',
             '$_POST[street]',
             '$_POST[city]',
@@ -182,7 +182,7 @@ class contactdb{
     //Search Suggestion
     function search_suggest() {
         if(isset($_POST['key']) && $_POST['search']!='') {
-        $query="SELECT f_name,l_name from detail where f_name LIKE '$_POST[search]%'";
+        $query="SELECT fname,lname from detail where fname LIKE '$_POST[search]%'";
         $this->json_out($query);
         }
     }
@@ -195,7 +195,7 @@ class contactdb{
 
     //View Single Contact
     function view_contact() {
-        $query="SELECT * from detail,address where detail.id=address.id and f_name = 'aadil'";
+        $query="SELECT * from detail,address where detail.id=address.id and fname = 'aadil'";
         $this->json_out($query);
     }
 

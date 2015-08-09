@@ -65,19 +65,19 @@
         <div class="sidebar">
             <div class="sidebar-container">
                 <div class="sidebar-content">
-                    <div><a href=""><i class="fa fa-home"></i></a>
+                    <div data-toggle="tooltip" title="Home"><a href="#"><i class="fa fa-home"></i></a>
                     </div>
-                    <div><a href=""><i class="fa fa-user-plus"></i></a>
+                    <div data-toggle="tooltip" title="Add Contact"><a href="#"  data-toggle="modal" data-target="#add-contact"><i class="fa fa-user-plus"></i></a>
                     </div>
-                    <div><a href=""><i class="fa fa-users"></i></a>
+                    <div data-toggle="tooltip" title="View All"><a href="#"><i class="fa fa-users"></i></a>
                     </div>
-                    <div><a href=""><i class="fa fa-file"></i></a>
+                    <div data-toggle="tooltip" title="Import"><a href="#"><i class="fa fa-file"></i></a>
                     </div>
-                    <div><a href=""><i class="fa fa-history"></i></a>
+                    <div data-toggle="tooltip" title="Backup"><a href="#"><i class="fa fa-history"></i></a>
                     </div>
                 </div>
             </div>
             <!--            toggle view-->
-            <div class="options"><a href="#"><i class="fa fa-arrow-left"></i></a>
+            <div class="options" data-toggle="tooltip" title="Toggle Sidebar"><a href="#"><i class="fa fa-arrow-left"></i></a>
             </div>
         </div>

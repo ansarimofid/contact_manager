@@ -3,8 +3,8 @@
 include_once "contactsClass.php";
 
 $mycont = new contactdb("mylocalhost","mofid","","testing");
-$mycont->add_detail();
-$mycont->search_suggest();
+//$mycont->add_detail();
+//$mycont->search_suggest();
 //$mycont->view_all_contacts();
 //$mycont->view_contact();
 //$mycont->delete_contact('300014');
@@ -14,5 +14,6 @@ $mycont->search_suggest();
 /*$sql_1="SELECT * FROM address";
 $mycont->json_out($sql_1);*/
 
+print_r($_POST);
 
 ?>
