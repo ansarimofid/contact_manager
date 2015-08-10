@@ -110,6 +110,16 @@
 .tooltip.in {
     opacity: 1;
 }
+
+.modal-body {
+  position: relative;
+  padding: 15px;
+    height: 80%;
+    overflow-y: auto;
+}
+.modal-dialog{
+    overflow-y: initial !important;
+}
 /*General Style*/
 
 body,
@@ -301,7 +311,7 @@ header {
 .form-container {
     padding-right: 50px;
     padding-left: 50px;
-    padding-top: 50px;
+    padding-top: 25px;
     text-align: left;
 }
 

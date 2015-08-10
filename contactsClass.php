@@ -130,8 +130,8 @@ class contactdb{
             FOREIGN KEY(id) references detail(id) ON DELETE CASCADE
                 ON UPDATE CASCADE";
 
-        create_tb("detail",$detail);
-        create_tb("address",$addr);
+        $this->create_tb("detail",$detail);
+        $this->create_tb("address",$addr);
     }
 
     //Adding Data To Database

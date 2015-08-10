@@ -45,12 +45,12 @@
                             <!--                            Nav-Log-->
                             <ul class="nav navbar-nav navbar-custom">
                                 <li>
-                                    <a href="">
+                                    <a href="#" data-toggle="modal" data-target="#login">
                                         <i class="fa fa-sign-in fa-2x"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="#" data-toggle="modal" data-target="#register">
                                         <i class="fa fa-user-plus fa-2x"></i>
                                     </a>
                                 </li>

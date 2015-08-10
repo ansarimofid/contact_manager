@@ -5,7 +5,8 @@ $('document').ready(function () {
         var form_data = $(this).serialize();
 
         $.post("fetch.data.php?", form_data + "&form=true", function (data) {
-            $('.modal-body').html(data);
+//            $('.modal-body').html(data);
+            console.log(data);
         });
     });
 

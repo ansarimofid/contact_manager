@@ -2,8 +2,10 @@
 //header("Content-Type: text/javascript; charset=utf-8");
 include_once "contactsClass.php";
 
-$mycont = new contactdb("mylocalhost","mofid","","testing");
-//$mycont->add_detail();
+$mycont = new contactdb("mylocalhost","mofid","","mydbx");
+//$mycont = new contactdb("mydbx");
+//$mycont->create_contact_table();
+$mycont->add_detail();
 //$mycont->search_suggest();
 //$mycont->view_all_contacts();
 //$mycont->view_contact();

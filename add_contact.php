@@ -1,6 +1,4 @@
-<?php include_once "header.php";?>
 
-<html>
 <!--Form Modal-->
 <div class="contact-form modal fade" id="add-contact" role="dialog">
     <div class="modal-dialog">
@@ -171,7 +169,7 @@
 
                 <!--Buttons-->
                 <div class="form-group">
-                    <button id="advance-button" class="btn btn-default">
+                    <button type="button" id="advance-button" class="btn btn-default">
                         <span class="adv-inner-text-before">More
                        <i class="fa fa-chevron-down"></i></span>
                         <span class="adv-inner-text-after">Less
@@ -184,7 +182,3 @@
         </div>
     </div>
 </div>
-
-</html>
-
-<?php include_once "footer.php";?>
