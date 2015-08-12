@@ -1,4 +1,3 @@
-
 <!--Form Modal-->
 <div class="contact-form modal fade" id="add-contact" role="dialog">
     <div class="modal-dialog">
@@ -6,7 +5,7 @@
         <div class="container-fluid form-container modal-content">
             <!--            Modal Header-->
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <button type="button" class="close" id="reset" data-dismiss="modal">&times;</button>
                 <h1 class="modal-title">Add New Contact</h1>
             </div>
             <!--          Modal Body And  Main Form Container-->
@@ -17,12 +16,12 @@
                     <div class="form-group col-sm-6">
                         <label>First Name
                         </label>
-                        <input type="text" class="form-control" name="fname" placeholder="Enter First Name">
+                        <input type="text" class="form-control required validate" name="fname" placeholder="Enter First Name" required maxlength="15">
                     </div>
                     <div class="form-group col-sm-6">
                         <label>Last Name
                         </label>
-                        <input type="text" class="form-control" name="lname" placeholder="Enter Last Name">
+                        <input type="text" class="form-control required validate" name="lname" placeholder="Enter Last Name" required pattern="[a-zA-Z]{3,}" maxlength="15">
                     </div>
                 </div>
 
@@ -31,7 +30,7 @@
                     <div class="col-sm-12">
                         <label>Gender
                         </label>
-                        <select name="gender" class="form-control">
+                        <select name="gender" class="form-control required">
                             <option disabled selected>Choose Gender</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
@@ -54,7 +53,7 @@
                         <label>E-mail
                             <i class="fa fa-at"></i>
                         </label>
-                        <input type="email" class="form-control" name="email" placeholder="Enter E-mail">
+                        <input type="email" class="form-control required validate" name="email" placeholder="Enter E-mail">
                     </div>
                 </div>
 
@@ -65,10 +64,10 @@
                         </label>
                         <input type="text" class="form-control" name="tel" placeholder="Enter Telephone No.">
                     </div>
-                    <div class="form-group col-sm-6">
+                    <div class="form-group col-sm-6 ">
                         <label>Mobile
                         </label>
-                        <input type="text" class="form-control" name="mob" placeholder="Enter Mobile No.">
+                        <input type="text" class="form-control required" name="mob" placeholder="Enter Mobile No." pattern="[0-9]{10}">
                     </div>
                 </div>
                 <!--                Website-->
@@ -175,6 +174,7 @@
                         <span class="adv-inner-text-after">Less
                        <i class="fa fa-chevron-up"></i></span>
                     </button>
+                    <button type="reset" class="btn btn-warning">Reset</button>
                     <button type="submit" class="btn btn-success">Submit</button>
                 </div>
 

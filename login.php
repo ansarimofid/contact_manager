@@ -15,7 +15,7 @@
                     <div class="col-sm-12">
                         <label>Email or Username
                         </label>
-                        <input type="text" class="form-control" name="password" placeholder="Enter Your Username">
+                        <input type="text" class="form-control required" name="password" placeholder="Enter Your Username">
                     </div>
                 </div>
                 <!--                Password-->
@@ -23,7 +23,7 @@
                     <div class="col-sm-12">
                         <label>Password
                         </label>
-                        <input type="password" class="form-control" name="password" placeholder="Enter Your Password">
+                        <input type="password" class="form-control required" name="password" placeholder="Enter Your Password">
                     </div>
                 </div>
 

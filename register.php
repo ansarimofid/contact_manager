@@ -16,12 +16,12 @@
                     <div class="form-group col-sm-6">
                         <label>First Name
                         </label>
-                        <input type="text" class="form-control" name="fname" placeholder="Your First Name">
+                        <input type="text" class="form-control required" name="fname" placeholder="Your First Name">
                     </div>
                     <div class="form-group col-sm-6">
                         <label>Last Name
                         </label>
-                        <input type="text" class="form-control" name="lname" placeholder="Your Last Name">
+                        <input type="text" class="form-control required" name="lname" placeholder="Your Last Name">
                     </div>
                 </div>
 
@@ -52,23 +52,21 @@
                         <label>E-mail
                             <i class="fa fa-at"></i>
                         </label>
-                        <input type="email" class="form-control" name="email" placeholder="Your E-mail">
+                        <input type="email" class="form-control required" name="email" placeholder="Your E-mail">
                     </div>
                 </div>
-                Username
                 <div class="form-group row">
                     <div class="col-sm-12">
                         <label>Username
                         </label>
-                        <input type="text" class="form-control" name="password" placeholder="Choose Your Username">
+                        <input type="text" class="form-control required" name="username" placeholder="Choose Your Username">
                     </div>
                 </div>
-                Password
                 <div class="form-group row">
                     <div class="col-sm-12">
                         <label>Password
                         </label>
-                        <input type="password" class="form-control" name="password" placeholder="Choose Your Password">
+                        <input type="password" class="form-control required" name="password" placeholder="Choose Your Password">
                     </div>
                 </div>
 
