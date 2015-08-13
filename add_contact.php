@@ -67,7 +67,7 @@
                     <div class="form-group col-sm-6 ">
                         <label>Mobile
                         </label>
-                        <input type="text" class="form-control required" name="mob" placeholder="Enter Mobile No." pattern="[0-9]{10}">
+                        <input type="text" class="form-control required" name="mob" placeholder="Enter Mobile No.">
                     </div>
                 </div>
                 <!--                Website-->
@@ -175,7 +175,7 @@
                        <i class="fa fa-chevron-up"></i></span>
                     </button>
                     <button type="reset" class="btn btn-warning">Reset</button>
-                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button type="submit" class="btn btn-success disabled">Submit</button>
                 </div>
 
             </form>

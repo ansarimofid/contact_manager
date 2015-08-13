@@ -4,6 +4,7 @@
 <script src="/contact_manager/assets/js/jquery.min.js"></script>
 <script src="/contact_manager/assets/js/main.js"></script>
 <script src="/contact_manager/assets/js/bootstrap.min.js"></script>
+<script src="/contact_manager/assets/js/formValidation.js"></script>
 </body>
 
 </html>
