@@ -175,7 +175,7 @@
                        <i class="fa fa-chevron-up"></i></span>
                     </button>
                     <button type="reset" class="btn btn-warning">Reset</button>
-                    <button type="submit" class="btn btn-success disabled">Submit</button>
+                    <button type="submit" class="btn btn-success">Submit</button>
                 </div>
 
             </form>

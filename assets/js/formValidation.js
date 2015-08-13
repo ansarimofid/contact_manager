@@ -1,11 +1,14 @@
-function validation($form) {
+function FormValidation($form) {
+    //    this.$form = $form;
+
     //    Adding Error Field to Every Input
     $form.find('input').each(function () {
         var $this = $(this);
         $this.after('<span class="form-error"></span');
         check_required_error($this);
-    });
+        validate_submit($form);
 
+    });
 
     //    Checking for Required Input field error
     function check_required_error($this) {
@@ -19,14 +22,13 @@ function validation($form) {
         }
     }
 
-    //    Validation Function
+    //    Validation Rule for Regex and Function to perform Regex Operation
     function validate($this) {
         var input = $this;
         var input_name = $this.attr('name');
         var input_val = $this.val();
 
         //        Function to Verify Regex
-
         function check_error(regex_exp, len, regex_error) {
             if (input_val.length > 0 && input.attr('class').search('validate') != -1) {
                 if (regex_exp.test(input_val)) {
@@ -49,6 +51,7 @@ function validation($form) {
         }
 
 
+        //        Regex rule for each field
         switch (input_name) {
         case 'fname':
             check_error(/^([a-zA-Z]{3,15})+(([\'\,\.\-][a-zA-Z])?[a-zA-Z]*)*$/, 3, "* Only Alphabets");
@@ -118,8 +121,19 @@ function validation($form) {
         }
     }
 
+    //    Disable Submit Button Until Validation
+    function validate_submit($this) {
+        var p = $this.find('input.validate.input-valid').length;
+        var q = $this.find('input.validate').length;
+        if (p == q) {
+            $this.find('[type="submit"]').removeClass('disabled');
+        } else {
+            $this.find('[type="submit"]').addClass('disabled');
 
-    //    Form Validation
+        }
+    }
+
+    //   Funcion to Run FormValidation
     this.validate = function () {
         $form.find('input').keyup(function () {
             var $this = $(this);
@@ -129,15 +143,11 @@ function validation($form) {
         });
     }
 
-    //    Disable Submit Button
-    function validate_submit($this) {
-        var p = $this.find('input.validate.input-valid').length;
-        var q = $this.find('input.validate').length;
-        if (p == q) {
-            $this.find('button.disabled').removeClass('disabled');
-        }
+    //    Required Field Reset
+    this.rfReset = function () {
+        $form.find('input').each(function () {
+            check_required_error($(this));
+        });
     }
-
-    validate_submit($form);
 
 }
