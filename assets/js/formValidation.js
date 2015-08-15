@@ -1,18 +1,20 @@
-function FormValidation($form) {
-    //    this.$form = $form;
+$.fn.formValidation = function () {
+
+    $form = this;
 
     //    Adding Error Field to Every Input
-    $form.find('input').each(function () {
-        var $this = $(this);
-        $this.after('<span class="form-error"></span');
-        check_required_error($this);
-        validate_submit($form);
-
-    });
+    function Add_field() {
+        $form.find('input').each(function () {
+            var $this = $(this);
+            $this.after('<span class="form-error"></span');
+            check_required_error($this);
+            validate_submit($form);
+        });
+    }
 
     //    Checking for Required Input field error
     function check_required_error($this) {
-        if ($this.attr('class').search('required') != -1 && $this.val() == '') {
+        if ($this.attr('class').search('required') != -1 && $this.val() == '' && $this.attr('class').search('validate') != -1) {
             $this.removeClass('input-valid');
             $this.siblings('.form-error').html("* Required Field");
         } else if ($this.attr('class').search('required') != -1 && $this.attr('class').search('validate') == -1) {
@@ -23,7 +25,7 @@ function FormValidation($form) {
     }
 
     //    Validation Rule for Regex and Function to perform Regex Operation
-    function validate($this) {
+    function regex_validate($this) {
         var input = $this;
         var input_name = $this.attr('name');
         var input_val = $this.val();
@@ -116,8 +118,6 @@ function FormValidation($form) {
         case 'username':
             check_error(/[^A-Za-z0-9_@\.]|@{2,}|\.{5,}/, 3, "* invalid Username");
             break;
-
-
         }
     }
 
@@ -126,9 +126,9 @@ function FormValidation($form) {
         var p = $this.find('input.validate.input-valid').length;
         var q = $this.find('input.validate').length;
         if (p == q) {
-            $this.find('[type="submit"]').removeClass('disabled');
+            $this.find('[type="submit"].validate').removeAttr("disabled", "disabled");
         } else {
-            $this.find('[type="submit"]').addClass('disabled');
+            $this.find('[type="submit"].validate').attr("disabled", "disabled");
 
         }
     }
@@ -137,7 +137,7 @@ function FormValidation($form) {
     this.validate = function () {
         $form.find('input').keyup(function () {
             var $this = $(this);
-            validate($this);
+            regex_validate($this);
             check_required_error($this);
             validate_submit($form);
         });
@@ -147,7 +147,19 @@ function FormValidation($form) {
     this.rfReset = function () {
         $form.find('input').each(function () {
             check_required_error($(this));
+            /*$form.find('span.form-error').each(function () {
+                //            $(this).remove();*/
         });
     }
 
+    Add_field();
+    this.validate();
+
+    //Extra functions
+    return {
+        rfReset: function () {
+            $form.rfReset();
+            return $form;
+        }
+    }
 }

@@ -1,4 +1,6 @@
 $('document').ready(function () {
+
+//    Submitting Form Detail
     $('#contact_data_submit').submit(function (evt) {
         evt.preventDefault();
 
@@ -10,12 +12,14 @@ $('document').ready(function () {
         });
     });
 
+//    Advance button
     $('#advance-button').click(function () {
         $('#advance').slideToggle(1000);
         $('.adv-inner-text-before').fadeToggle(0);
         $('.adv-inner-text-after').fadeToggle(0);
     });
 
+//    Auto Suggestion Retrival
     $('#search_input').keyup(function () {
         var inp = $(this).serialize();
         $.post("fetch.data.php", inp + "&key=key", function (data) {
@@ -33,17 +37,18 @@ $('document').ready(function () {
         $('.sidebar-container').fadeToggle(1000);
         $('.options> a > i').toggleClass('fa-arrow-right');
     });
-    //Sidebar Tooltio
+
+    //Sidebar Tooltip
     $('[data-toggle="tooltip"]').tooltip({
         placement: 'right'
     });
+
     //    Reset Form and Error tag
     $('.modal').on('hidden.bs.modal', function () {
         var $this = $(this);
         $this.find('form')[0].reset();
-        inputValidate.rfReset();
+        yu.rfReset();
     });
 
-    var inputValidate=new FormValidation($('form'));
-    inputValidate.validate();
+    var yu= $('form').formValidation();
 });
