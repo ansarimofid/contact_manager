@@ -34,12 +34,24 @@
                                 <li class="col-sm-12">
                                     <form class="navbar-form navbar-form-custom" role="search">
                                         <div class="form-group input-group input-group-lg  col-sm-10">
-                                            <input type="text" class="form-control" placeholder="Search Contacts...">
+                                            <!--
+                                                                      Search Field-->
+                                            <input type="text" class="form-control" placeholder="Search Contacts..." id="search_input" name='search'>
                                             <span class="input-group-btn input-custom">
         <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
       </span>
+
+                                            <!--<div class="search-result">-->
+
+                                            <!--                                                <h2>Testing</h2>-->
                                         </div>
                                     </form>
+                                    <div class="search-result">
+                                        <ul>
+                                            <li><a href="#">No Suggestion</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </li>
                             </ul>
                             <!--                            Nav-Log-->
@@ -67,7 +79,7 @@
                 <div class="sidebar-content">
                     <div data-toggle="tooltip" title="Home"><a href="#"><i class="fa fa-home"></i></a>
                     </div>
-                    <div data-toggle="tooltip" title="Add Contact"><a href="#"  data-toggle="modal" data-target="#add-contact"><i class="fa fa-user-plus"></i></a>
+                    <div data-toggle="tooltip" title="Add Contact"><a href="#" data-toggle="modal" data-target="#add-contact"><i class="fa fa-user-plus"></i></a>
                     </div>
                     <div data-toggle="tooltip" title="View All"><a href="#"><i class="fa fa-users"></i></a>
                     </div>

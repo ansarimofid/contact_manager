@@ -166,7 +166,7 @@ class contactdb{
             $this->sql_query($sql_1);
             $this->sql_query($sql_2);
 
-            echo "Successfully Added Detaile";
+            echo "<h2>Successfully Added Detail</h2>";
         }
     }
 
@@ -180,13 +180,16 @@ class contactdb{
     }
 
     //Search Suggestion
-    function search_suggest() {
-        if(isset($_POST['key']) && $_POST['search']!='') {
-        $query="SELECT fname,lname from detail where fname LIKE '$_POST[search]%'";
+    function search_suggest($search_key) {
+        $query="SELECT fname,lname from detail where fname LIKE '$search_key%'";
         $this->json_out($query);
-        }
     }
+    /*function search_suggest() {
 
+        $query="SELECT fname,lname from detail where fname LIKE '$search_key%'";
+        $this->json_out($query);
+    }
+*/
     //View All Contacts in Database
     function view_all_contacts() {
         $query="SELECT * from detail,address where detail.id=address.id";
