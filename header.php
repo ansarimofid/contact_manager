@@ -93,3 +93,4 @@
             <div class="options" data-toggle="tooltip" title="Toggle Sidebar"><a href="#"><i class="fa fa-arrow-left"></i></a>
             </div>
         </div>
+        <!--        Sidebar Ends-->

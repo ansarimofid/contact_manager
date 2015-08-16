@@ -11,10 +11,12 @@ if(isset($_POST['key']) && $_POST['search']!='') {
     $mycont->search_suggest($_POST['search']);
             }
 
+$mycont->view_all_contacts();
+
+
 //$mycont->search_suggest($_POST['search']);
 
 
-//$mycont->view_all_contacts();
 //$mycont->view_contact();
 //$mycont->delete_contact('300014');
 //$mycont->update_contact('300013','l_name','Mittal');

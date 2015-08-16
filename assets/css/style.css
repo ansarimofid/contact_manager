@@ -138,6 +138,10 @@ body {
 .wrapper {
     height: 100%;
 }
+.content-wrapper{
+    margin:80px 0 0 80px;
+}
+
 /*Navigation Bar*/
 
 .nav-log {
@@ -211,6 +215,8 @@ body {
     height: 100%;
     padding: 0;
 }
+
+/*Sidebar Style*/
 
 .sidebar {
     /*    float: left;*/
@@ -307,8 +313,7 @@ header {
     font-family: PtSerif;
 }
 
-.contact-form {}
-
+/*Add-contact-form style*/
 .form-container {
     padding-right: 50px;
     padding-left: 50px;
@@ -335,6 +340,7 @@ header {
     color: red;
 }
 
+/*Search Result Style*/
 .search-result {
     display: none;
     position: absolute;
@@ -374,4 +380,34 @@ header {
 .search-result a:hover {
     color: rgba(63, 38, 28, 1);
     font-weight: bold;
+}
+
+table {
+    text-align: left;
+}
+
+table a{
+    display: block;
+}
+
+.contact-list {
+    margin:0 20px 0 20px;
+    text-align: left;
+    margin-top: 100px;
+    border: 2px solid transparent;
+    border-radius: 5px 5px 0 0;
+    margin-right: 30px;
+}
+
+.list-group-title {
+    background-color: rgba(63, 38, 28, 1);
+    color: white;
+    padding-top: 20px;
+       font-weight: bold;
+    border-radius:15px 15px 0 0 !important;
+    font-size: 1.2em;
+}
+
+.contact-list>a:nth-child(odd){
+    background-color: rgba(255,255,255,0.3);
 }
